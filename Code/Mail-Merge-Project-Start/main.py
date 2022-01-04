@@ -9,7 +9,6 @@ with open('./Mail-Merge-Project-Start/Input/Names/invited_names.txt') as name_li
 
 # LOOP THROUGH NAMES, OPEN 'STARTING_LETTER' FILE
     for name in names:
-
         with open('./Mail-Merge-Project-Start/Input/Letters/starting_letter.txt', mode='r') as letters:
             content = letters.readlines()
 
@@ -23,7 +22,6 @@ with open('./Mail-Merge-Project-Start/Input/Names/invited_names.txt') as name_li
 
 # CREATE A NEW FILE FOR EACH NAME AND RESET NEW_LETTER 
         with open(name +'_letter.txt', mode='w') as textfile:
-
             for element in new_letter:
                 textfile.write(element)
         new_letter = []
